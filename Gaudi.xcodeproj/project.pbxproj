@@ -8,8 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		50692034239798980083ACDD /* Gaudi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5069202A239798980083ACDD /* Gaudi.framework */; };
-		50692039239798980083ACDD /* GaudiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50692038239798980083ACDD /* GaudiTests.swift */; };
 		5069203B239798980083ACDD /* Gaudi.h in Headers */ = {isa = PBXBuildFile; fileRef = 5069202D239798980083ACDD /* Gaudi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5069208D23979A140083ACDD /* AppearanceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069208823979A130083ACDD /* AppearanceRule.swift */; };
+		5069208E23979A140083ACDD /* ThemeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069208923979A140083ACDD /* ThemeContainer.swift */; };
+		5069208F23979A140083ACDD /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069208A23979A140083ACDD /* FontStyle.swift */; };
+		5069209023979A140083ACDD /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069208B23979A140083ACDD /* ThemeProtocol.swift */; };
+		5069209123979A140083ACDD /* SemanticColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069208C23979A140083ACDD /* SemanticColor.swift */; };
+		5069209A23979A4A0083ACDD /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069209323979A4A0083ACDD /* UIColor+Theme.swift */; };
+		5069209C23979A4A0083ACDD /* String+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069209523979A4A0083ACDD /* String+Theme.swift */; };
+		5069209D23979A4A0083ACDD /* UIFont+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069209623979A4A0083ACDD /* UIFont+Theme.swift */; };
+		5069209E23979A4A0083ACDD /* UIColors+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069209723979A4A0083ACDD /* UIColors+Hex.swift */; };
+		506920A023979A4A0083ACDD /* UILabel+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069209923979A4A0083ACDD /* UILabel+Theme.swift */; };
+		506920A223979A5A0083ACDD /* UIWindow+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920A123979A5A0083ACDD /* UIWindow+Theme.swift */; };
+		506920A623979DFB0083ACDD /* StringAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920A523979DFB0083ACDD /* StringAttributes.swift */; };
+		506920A823979EF20083ACDD /* AttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920A723979EF10083ACDD /* AttributesBuilder.swift */; };
+		506920AA23979F8C0083ACDD /* NSAttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920A923979F8C0083ACDD /* NSAttributedStringBuilder.swift */; };
+		506920AC2397A07F0083ACDD /* NSAttribbutedString+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920AB2397A07F0083ACDD /* NSAttribbutedString+Theme.swift */; };
+		506920B02397A53B0083ACDD /* MockTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920AE2397A53A0083ACDD /* MockTheme.swift */; };
+		506920B12397A53B0083ACDD /* ThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920AF2397A53A0083ACDD /* ThemeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +43,24 @@
 		5069202D239798980083ACDD /* Gaudi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gaudi.h; sourceTree = "<group>"; };
 		5069202E239798980083ACDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50692033239798980083ACDD /* GaudiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaudiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		50692038239798980083ACDD /* GaudiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaudiTests.swift; sourceTree = "<group>"; };
 		5069203A239798980083ACDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5069208823979A130083ACDD /* AppearanceRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceRule.swift; sourceTree = "<group>"; };
+		5069208923979A140083ACDD /* ThemeContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeContainer.swift; sourceTree = "<group>"; };
+		5069208A23979A140083ACDD /* FontStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		5069208B23979A140083ACDD /* ThemeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		5069208C23979A140083ACDD /* SemanticColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemanticColor.swift; sourceTree = "<group>"; };
+		5069209323979A4A0083ACDD /* UIColor+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		5069209523979A4A0083ACDD /* String+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Theme.swift"; sourceTree = "<group>"; };
+		5069209623979A4A0083ACDD /* UIFont+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Theme.swift"; sourceTree = "<group>"; };
+		5069209723979A4A0083ACDD /* UIColors+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors+Hex.swift"; sourceTree = "<group>"; };
+		5069209923979A4A0083ACDD /* UILabel+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Theme.swift"; sourceTree = "<group>"; };
+		506920A123979A5A0083ACDD /* UIWindow+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Theme.swift"; sourceTree = "<group>"; };
+		506920A523979DFB0083ACDD /* StringAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAttributes.swift; sourceTree = "<group>"; };
+		506920A723979EF10083ACDD /* AttributesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesBuilder.swift; sourceTree = "<group>"; };
+		506920A923979F8C0083ACDD /* NSAttributedStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringBuilder.swift; sourceTree = "<group>"; };
+		506920AB2397A07F0083ACDD /* NSAttribbutedString+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribbutedString+Theme.swift"; sourceTree = "<group>"; };
+		506920AE2397A53A0083ACDD /* MockTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTheme.swift; sourceTree = "<group>"; };
+		506920AF2397A53A0083ACDD /* ThemeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				5069202D239798980083ACDD /* Gaudi.h */,
+				5069208923979A140083ACDD /* ThemeContainer.swift */,
+				506920A123979A5A0083ACDD /* UIWindow+Theme.swift */,
+				5069208823979A130083ACDD /* AppearanceRule.swift */,
+				506920A323979C5F0083ACDD /* Theme */,
+				506920A423979D3C0083ACDD /* Strings */,
+				5069209223979A2F0083ACDD /* UIKit+Theme */,
 				5069202E239798980083ACDD /* Info.plist */,
 			);
 			path = Gaudi;
@@ -80,10 +118,52 @@
 		50692037239798980083ACDD /* GaudiTests */ = {
 			isa = PBXGroup;
 			children = (
-				50692038239798980083ACDD /* GaudiTests.swift */,
+				506920AE2397A53A0083ACDD /* MockTheme.swift */,
+				506920AF2397A53A0083ACDD /* ThemeTests.swift */,
 				5069203A239798980083ACDD /* Info.plist */,
 			);
 			path = GaudiTests;
+			sourceTree = "<group>";
+		};
+		5069209223979A2F0083ACDD /* UIKit+Theme */ = {
+			isa = PBXGroup;
+			children = (
+				5069209323979A4A0083ACDD /* UIColor+Theme.swift */,
+				5069209723979A4A0083ACDD /* UIColors+Hex.swift */,
+				5069209623979A4A0083ACDD /* UIFont+Theme.swift */,
+				5069209923979A4A0083ACDD /* UILabel+Theme.swift */,
+			);
+			path = "UIKit+Theme";
+			sourceTree = "<group>";
+		};
+		506920A323979C5F0083ACDD /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				5069208B23979A140083ACDD /* ThemeProtocol.swift */,
+				5069208C23979A140083ACDD /* SemanticColor.swift */,
+				5069208A23979A140083ACDD /* FontStyle.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		506920A423979D3C0083ACDD /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				5069209523979A4A0083ACDD /* String+Theme.swift */,
+				506920AB2397A07F0083ACDD /* NSAttribbutedString+Theme.swift */,
+				506920A523979DFB0083ACDD /* StringAttributes.swift */,
+				506920AD2397A1950083ACDD /* Builders */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		506920AD2397A1950083ACDD /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				506920A723979EF10083ACDD /* AttributesBuilder.swift */,
+				506920A923979F8C0083ACDD /* NSAttributedStringBuilder.swift */,
+			);
+			path = Builders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +228,7 @@
 				TargetAttributes = {
 					50692029239798980083ACDD = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					50692032239798980083ACDD = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -195,6 +276,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5069208D23979A140083ACDD /* AppearanceRule.swift in Sources */,
+				506920AA23979F8C0083ACDD /* NSAttributedStringBuilder.swift in Sources */,
+				5069208F23979A140083ACDD /* FontStyle.swift in Sources */,
+				506920A023979A4A0083ACDD /* UILabel+Theme.swift in Sources */,
+				5069209C23979A4A0083ACDD /* String+Theme.swift in Sources */,
+				5069209E23979A4A0083ACDD /* UIColors+Hex.swift in Sources */,
+				506920AC2397A07F0083ACDD /* NSAttribbutedString+Theme.swift in Sources */,
+				506920A823979EF20083ACDD /* AttributesBuilder.swift in Sources */,
+				5069208E23979A140083ACDD /* ThemeContainer.swift in Sources */,
+				5069209A23979A4A0083ACDD /* UIColor+Theme.swift in Sources */,
+				5069209023979A140083ACDD /* ThemeProtocol.swift in Sources */,
+				5069209123979A140083ACDD /* SemanticColor.swift in Sources */,
+				5069209D23979A4A0083ACDD /* UIFont+Theme.swift in Sources */,
+				506920A223979A5A0083ACDD /* UIWindow+Theme.swift in Sources */,
+				506920A623979DFB0083ACDD /* StringAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50692039239798980083ACDD /* GaudiTests.swift in Sources */,
+				506920B02397A53B0083ACDD /* MockTheme.swift in Sources */,
+				506920B12397A53B0083ACDD /* ThemeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +437,7 @@
 		5069203F239798980083ACDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -347,6 +445,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Gaudi/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,6 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.merlin-tech.Gaudi";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +463,7 @@
 		50692040239798980083ACDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -370,6 +471,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Gaudi/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,6 +488,7 @@
 		50692042239798980083ACDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GaudiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +506,7 @@
 		50692043239798980083ACDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GaudiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

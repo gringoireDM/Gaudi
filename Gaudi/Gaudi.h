@@ -6,7 +6,7 @@
 //  Copyright © 2019 Giuseppe Lanza. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 //! Project version number for Gaudi.
 FOUNDATION_EXPORT double GaudiVersionNumber;
