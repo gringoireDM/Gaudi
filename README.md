@@ -90,3 +90,22 @@ This is an appearance rule set that customize the appearance of all the navigati
 Appearance Rule Sets are reversible. This means that you can revert your theme to default settings in runtime. 
 
 If you don't need Global Appearance for yur theme you can use the `.empty` appearance rule set.
+
+## Setting up the theme
+Once your Theme object is created, you are ready to use it. Assign your Theme to the ThemeContainer in your AppDelegate.
+
+```swift
+func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    ThemeContainer.currentTheme = YourTheme()
+}
+```
+
+**Gaudí** provides many UIKit extensions to easily access colors and fonts, and to easily configure labels, buttons and Strings (`NSAttributedString`). For example to setup a title label you can use
+
+```swift
+label.applyLabelStyle(.title(.regular), semanticColor: .label(.primary))
+```
+
+This will change the font (and size) and the color for the text of the `UILabel`. To obtain a color for a semantic color you can use the UIColor extension: `UIColor.semanticColor(.fill(.primary))`
+
