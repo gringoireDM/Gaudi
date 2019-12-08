@@ -20,6 +20,7 @@ extension SemanticColor {
             case .quaternary: return .lightGray
             case .placeholder: return .lightGray
             case .link: return .blue
+            case let .custom(color): return color
             }
         case .fill(let fillColor):
             switch fillColor {
@@ -28,23 +29,27 @@ extension SemanticColor {
             case .tertiary: return .green
             case .quaternary: return .red
             case .accent: return .cyan
+            case let .custom(color): return color
             }
         case .background(let backgroundColor):
             switch backgroundColor {
             case .primary: return .white
             case .secondary: return .gray
             case .tertiary: return .lightGray
+            case let .custom(color): return color
             }
         case .groupedBackground(let groupedBackgroundColor):
             switch groupedBackgroundColor {
             case .primary: return .white
             case .secondary: return .gray
             case .tertiary: return .lightGray
+            case let .custom(color): return color
             }
         case .separator(let separatorColor):
             switch separatorColor {
             case .semiTransparent: return UIColor.darkGray.withAlphaComponent(0.8)
             case .opaque: return .darkGray
+            case let .custom(color): return color
             }
         }
     }
