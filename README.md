@@ -32,6 +32,18 @@ Each one of these `LabelColor`, `FillColor`, `BackgroundColor`, `GroupedContentB
 
 Don't use a `LabelColor` as a fill color. This will introduce entropy in your project. Work closely with your designer to adhere to this specification. When in your code you will be using just `SemanticColor`s in the correct way, to re-skin your app will be as easy as change 20 lines of code. You will also be able to A/B test the different theme by creating a new theme object with the new colors.
 
+## Custom Semantc colors
+
+If the colors specializations for each category are not enough, you can create your own custom color using the special `custom` case of each color enum. To avoid repetitions in your code I recommend to extend the category and define a static var like this:
+
+```swift
+public extension LabelColor {
+    static var myCustomSemanticColor: LabelColor {
+        return .custom(color: .color(fromHex: "#123456"))
+    }
+}
+```
+
 # How to create a theme
 
 Creating a theme is as simple as creating a class conforming the protocol `ThemeProtocol`.
@@ -107,5 +119,44 @@ func application(_ application: UIApplication,
 label.applyLabelStyle(.title(.regular), semanticColor: .label(.primary))
 ```
 
-This will change the font (and size) and the color for the text of the `UILabel`. To obtain a color for a semantic color you can use the UIColor extension: `UIColor.semanticColor(.fill(.primary))`
+This will change the font (and size) and the color for the text of the `UILabel`. To obtain a color for a semantic color you can also use the UIColor extension: `UIColor.semanticColor(.fill(.primary))`
+
+## Changing the theme
+
+Similarly to the initialization of the default theme, from any point in your code you can switch the theme by using the `ThemeContainer.currentTheme` variable.
+
+`ThemeContainer.currentTheme = YourOtherTheme()`
+
+When this happens, Gaudí will automatically revert the previous theme `UIAppearance` rules, then will apply the new ones and call `applyTheme` on all `Themed` view controllers.
+
+## Themed
+
+For Gaudí to work properly in a multi theme app it's required to implement the `Themed` protocol in your themed view controllers. Without this protocol implementation, any existing instance of your non themed view controller will not change its appearance when the theme changes.
+
+Put all your appearance customizations in the required `applyTheme` functions. For `UITableView`/`UICollectionView` cells, if you are customizing their appearance in the respective data source methods, then a simple `reloadData` in the `applyTheme` function will refresh their colors and fonts.
+
+# Supporting Dark Mode with Gaudí
+
+With Gaudí supporting Dark mode is extremely simple. There two different ways of supporting dark mode with this framework:
+
+1. Implementing two different Themes and switching them when the `userInterfaceStyle` trait collection changes.
+2. Implementing one unique Theme that returns dynamic colors.
+
+We will explain now how to implement both.
+
+## ThemedWindow
+
+If you decide to go down the road of having two separate themes and switch them in runtime as needed, Gaudí offers a custom `UIWindow` that does just that. Initialise in your app delegate an instance of `ThemedWindow` by passing to it your Light mode theme and your dark mode theme.
+
+Gaudí will take care of switching between the two themes as needed in runtime.
+
+## Dynamic colors
+
+If you decide to have one unique Theme for supporting both light and dark mode, then you will have to return dynamic colors in your Theme `color(forSemanticColor:)` mapping function. This framework offers convenience initializers for `UIColor` to support this use case:
+
+`UIColor(lightColor: ..., darkColor: ...)`
+
+and
+
+`UIColor(lightColorHex: "#123456", darkColorHex: "#654321")`
 
