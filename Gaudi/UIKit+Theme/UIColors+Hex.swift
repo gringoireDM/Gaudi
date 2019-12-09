@@ -96,4 +96,16 @@ public extension UIColor {
         
         return selfR == r && selfG == g && selfB == b
     }
+    
+    @available(iOS 13.0, *)
+    convenience init(lightColorHex: String, darkColorHex: String) {
+        self.init { (traits) -> UIColor in
+            switch traits.userInterfaceStyle {
+            case .light: return .color(fromHex: lightColorHex)
+            case .dark: return .color(fromHex: darkColorHex)
+            case .unspecified: return .color(fromHex: lightColorHex)
+            @unknown default: return .color(fromHex: lightColorHex)
+            }
+        }
+    }
 }
