@@ -8,6 +8,19 @@ Gaudí also provides a DSL for `UIAppearance` rules and `NSAttributedString`.
 
 This framework uses semantic colors names to better adapt to [dark mode](https://developer.apple.com/documentation/xcode/supporting_dark_mode_in_your_interface) and other possible themes living within the same app.
 
+# Index
+* [What's wrong with explicit color names?](#whats-wrong-with-explicit-color-names)
+    * [Semantic colors](#semantic-colors)
+    * [Custom Semantic colors](#custom-semantic-colors)
+* [How to create a theme](#how-to-create-a-theme)
+    * [Appearance Rule Set](#appearance-rule-set)
+    * [Setting up the theme](#setting-up-the-theme)
+    * [Changing the theme](#changing-the-theme)
+    * [Themed](#themed)
+* [Supporting Dark Mode with Gaudí](#supporting-dark-mode-with-gaud%C3%AD)
+    * [ThemedWindow](#themedwindow)
+    * [Dynamic colors](#dynamic-colors)
+
 # What's wrong with explicit color names?
 
 Nothing, except that reading `red`, one would expect as result a color that is a shade of red, while reading `primary` there are no expectations.
