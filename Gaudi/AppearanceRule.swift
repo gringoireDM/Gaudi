@@ -35,13 +35,16 @@ public struct Reversible<Value> {
     }
 }
 
-public protocol AppearanceRuleProtocol {
+extension Reversible: Equatable where Value: Equatable { }
+
+public protocol AppearanceRule {
     func apply()
     func revert()
 }
 
-public struct PropertyAppearanceRule<T: UIAppearance, Value>: AppearanceRuleProtocol {
-    @Reversible private var value: Value
+public struct PropertyAppearanceRule<T: UIAppearance, Value>: AppearanceRule {
+    @Reversible
+    internal private(set) var value: Value
     let keypath: WritableKeyPath<T, Value>
     
     public init(keypath: WritableKeyPath<T, Value>, value: Value) {
@@ -61,8 +64,11 @@ public struct PropertyAppearanceRule<T: UIAppearance, Value>: AppearanceRuleProt
     }
 }
 
-public class SelectorAppearanceRule<T: UIAppearance, Value>: AppearanceRuleProtocol {
-    @Reversible private var value: Value
+extension PropertyAppearanceRule: Equatable where Value: Equatable { }
+
+public class SelectorAppearanceRule<T: UIAppearance, Value>: AppearanceRule {
+    @Reversible
+    internal private(set) var value: Value
     
     private let getter: (T) -> Value
     private let setter: (T, Value) -> Void
@@ -85,15 +91,20 @@ public class SelectorAppearanceRule<T: UIAppearance, Value>: AppearanceRuleProto
     }
 }
 
-public struct AppearanceRuleSet: AppearanceRuleProtocol {
+public struct AppearanceRuleSet: AppearanceRule {
     public static let empty: AppearanceRuleSet = AppearanceRuleSet(rules: [])
     
-    let rules: [AppearanceRuleProtocol]
-    public init(@AppearanceBuilder builder: () -> [AppearanceRuleProtocol]) {
-        rules = builder()
+    let rules: [AppearanceRule]
+    public init(@AppearanceBuilder builder: () -> AppearanceRule) {
+        let rule = builder()
+        if let set = rule as? AppearanceRuleSet {
+            self = set
+        } else {
+            self.rules = [rule]
+        }
     }
     
-    public init(rules: [AppearanceRuleProtocol]) {
+    public init(rules: [AppearanceRule]) {
         self.rules = rules
     }
     
@@ -112,17 +123,33 @@ public func + (lhs: AppearanceRuleSet, rhs: AppearanceRuleSet) -> AppearanceRule
 
 @_functionBuilder
 public struct AppearanceBuilder {
-    public static func buildBlock(_ rules: AppearanceRuleProtocol...) -> [AppearanceRuleProtocol] {
-        rules
+    public static func buildBlock(_ rule: AppearanceRule) -> AppearanceRule {
+        rule
+    }
+    
+    public static func buildBlock(_ rules: AppearanceRule...) -> AppearanceRule {
+        AppearanceRuleSet(rules: rules)
+    }
+    
+    public static func buildIf(_ rule: AppearanceRule?) -> AppearanceRule {
+        rule ?? AppearanceRuleSet.empty
+    }
+    
+    public static func buildEither(first: AppearanceRule) -> AppearanceRule {
+        first
+    }
+    
+    public static func buildEither(second: AppearanceRule) -> AppearanceRule {
+        second
     }
 }
 
 public extension UIAppearance {
-    static subscript<Value>(rule: WritableKeyPath<Self, Value>, value: Value) -> AppearanceRuleProtocol {
+    static subscript<Value>(rule: WritableKeyPath<Self, Value>, value: Value) -> AppearanceRule {
         PropertyAppearanceRule(keypath: rule, value: value)
     }
     
-    static subscript<Value>(get getter: @escaping (Self) -> Value, set setter: @escaping (Self, Value) -> Void, value val: Value) -> AppearanceRuleProtocol {
+    static subscript<Value>(get getter: @escaping (Self) -> Value, set setter: @escaping (Self, Value) -> Void, value val: Value) -> AppearanceRule {
         SelectorAppearanceRule(get: getter, set: setter, value: val)
     }
 }
