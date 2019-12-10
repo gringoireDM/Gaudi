@@ -61,7 +61,7 @@ class AppearanceRuleDSLTests: XCTestCase {
         XCTAssertEqual(set.rules.count, 1)
     }
     
-    func test_it_can_builf_if_else_first() {
+    func test_it_can_build_if_else_first() {
         let check = true
         let set = AppearanceRuleSet {
             if check {
@@ -79,7 +79,7 @@ class AppearanceRuleDSLTests: XCTestCase {
         XCTAssertEqual(rule, PropertyAppearanceRule(keypath: \.tintColor, value: .black) )
     }
     
-    func test_it_can_builf_if_else_second() {
+    func test_it_can_build_if_else_second() {
         let check = false
         let set = AppearanceRuleSet {
             if check {
