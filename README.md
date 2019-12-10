@@ -85,9 +85,36 @@ An appearance rule set is a set of appearance rules obtained by using `UIAppeara
 
 ```swift
 AppearanceRuleSet {
+    // UINavigationBar rules
+    UINavigationBar[\.barTintColor, self.color(forSemanticColor: .background(.primary))]
+    UINavigationBar[\.titleTextAttributes, [
+        .font: self.font(forStyle: .caption(attribute: .regular)),
+        .foregroundColor: self.color(forSemanticColor: .label(.primary))
+        ]
+    ]
+    
+    // UITabBar rules
+    UITabBar[\.barTintColor, self.color(forSemanticColor: .background(.primary))]
+    UITabBarItem[\.badgeColor, self.color(forSemanticColor: .fill(.primary))]
+    UITabBarItem[
+        get: { $0.titleTextAttributes(for: .selected) },
+        set: { $0.setTitleTextAttributes($1, for: .selected) }
+        value: [
+            NSAttributedString.Key.font: self.font(forStyle: .caption(attribute: .regular)),
+            NSAttributedString.Key.foregroundColor: self.color(forSemanticColor: .label(.primary))
+        ]
+    ]
+}
+```
+
+This is an appearance rule set that customize the appearance of all the navigation bars, all the tab bars and tab bar items of the app. The DSL allows to create a rule by using `KeyPath` to the customizabe property of the `UIAppearance` object.
+
+You can also group them with nested `AppearanceRuleSet`s:
+
+```swift
+AppearanceRuleSet {
     AppearanceRuleSet {
         UINavigationBar[\.barTintColor, self.color(forSemanticColor: .background(.primary))]
-        PropertyAppearanceRule<UINavigationBar, UIColor?>(keypath: \.tintColor, value: self.color(forColorPalette: .primary))
         UINavigationBar[\.titleTextAttributes, [
             .font: self.font(forStyle: .caption(attribute: .regular)),
             .foregroundColor: self.color(forSemanticColor: .label(.primary))
@@ -108,13 +135,14 @@ AppearanceRuleSet {
         ]
     }
 }
+
 ```
 
-This is an appearance rule set that customize the appearance of all the navigation bars, all the tab bars and tab bar items of the app. The DSL allows to create a rule by using `KeyPath` to the customizabe property of the `UIAppearance` object.
+the Appearance Rule DSL also support if and else statements.
 
 Appearance Rule Sets are reversible. This means that you can revert your theme to default settings in runtime. 
 
-If you don't need Global Appearance for yur theme you can use the `.empty` appearance rule set.
+If you don't need Global Appearance for your theme you can use the `.empty` appearance rule set.
 
 ## Setting up the theme
 Once your Theme object is created, you are ready to use it. Assign your Theme to the ThemeContainer in your AppDelegate.
