@@ -10,6 +10,7 @@
 		501029D5239F8E4E00BCB9A7 /* AppearanceRuleDSLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501029D4239F8E4E00BCB9A7 /* AppearanceRuleDSLTests.swift */; };
 		501029D723A0516D00BCB9A7 /* ReversibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501029D623A0516D00BCB9A7 /* ReversibleTests.swift */; };
 		501029D923A05BCD00BCB9A7 /* AppearanceRuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501029D823A05BCD00BCB9A7 /* AppearanceRuleTests.swift */; };
+		501029DD23A0FC1C00BCB9A7 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501029DC23A0FC1C00BCB9A7 /* StringTests.swift */; };
 		50692034239798980083ACDD /* Gaudi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5069202A239798980083ACDD /* Gaudi.framework */; };
 		5069203B239798980083ACDD /* Gaudi.h in Headers */ = {isa = PBXBuildFile; fileRef = 5069202D239798980083ACDD /* Gaudi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5069208D23979A140083ACDD /* AppearanceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069208823979A130083ACDD /* AppearanceRule.swift */; };
@@ -45,6 +46,7 @@
 		501029D4239F8E4E00BCB9A7 /* AppearanceRuleDSLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceRuleDSLTests.swift; sourceTree = "<group>"; };
 		501029D623A0516D00BCB9A7 /* ReversibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversibleTests.swift; sourceTree = "<group>"; };
 		501029D823A05BCD00BCB9A7 /* AppearanceRuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceRuleTests.swift; sourceTree = "<group>"; };
+		501029DC23A0FC1C00BCB9A7 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		5069202A239798980083ACDD /* Gaudi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gaudi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5069202D239798980083ACDD /* Gaudi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gaudi.h; sourceTree = "<group>"; };
 		5069202E239798980083ACDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		501029DA23A0FBEF00BCB9A7 /* RulesTests */ = {
+			isa = PBXGroup;
+			children = (
+				501029D4239F8E4E00BCB9A7 /* AppearanceRuleDSLTests.swift */,
+				501029D623A0516D00BCB9A7 /* ReversibleTests.swift */,
+				501029D823A05BCD00BCB9A7 /* AppearanceRuleTests.swift */,
+			);
+			path = RulesTests;
+			sourceTree = "<group>";
+		};
+		501029DB23A0FC0600BCB9A7 /* NSAttributedStringTests */ = {
+			isa = PBXGroup;
+			children = (
+				501029DC23A0FC1C00BCB9A7 /* StringTests.swift */,
+			);
+			path = NSAttributedStringTests;
+			sourceTree = "<group>";
+		};
 		50692020239798980083ACDD = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +146,8 @@
 			children = (
 				506920AE2397A53A0083ACDD /* MockTheme.swift */,
 				506920AF2397A53A0083ACDD /* ThemeTests.swift */,
-				501029D4239F8E4E00BCB9A7 /* AppearanceRuleDSLTests.swift */,
-				501029D623A0516D00BCB9A7 /* ReversibleTests.swift */,
-				501029D823A05BCD00BCB9A7 /* AppearanceRuleTests.swift */,
+				501029DB23A0FC0600BCB9A7 /* NSAttributedStringTests */,
+				501029DA23A0FBEF00BCB9A7 /* RulesTests */,
 				5069203A239798980083ACDD /* Info.plist */,
 			);
 			path = GaudiTests;
@@ -311,6 +330,7 @@
 				506920B12397A53B0083ACDD /* ThemeTests.swift in Sources */,
 				501029D723A0516D00BCB9A7 /* ReversibleTests.swift in Sources */,
 				501029D5239F8E4E00BCB9A7 /* AppearanceRuleDSLTests.swift in Sources */,
+				501029DD23A0FC1C00BCB9A7 /* StringTests.swift in Sources */,
 				501029D923A05BCD00BCB9A7 /* AppearanceRuleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

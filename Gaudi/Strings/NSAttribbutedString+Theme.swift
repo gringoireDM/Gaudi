@@ -33,12 +33,12 @@ public extension NSAttributedString {
         apply { .background(semanticColor, usingTheme: theme) }
     }
     
-    func underline(_ color: UIColor, style: NSUnderlineStyle = .single) -> NSAttributedString {
-        apply { .underline(color, style: style) }
+    func underline(color: UIColor, andStyle style: NSUnderlineStyle = .single) -> NSAttributedString {
+        apply { .underline(color: color, andStyle: style) }
     }
     
-    func underline(_ semanticColor: SemanticColor, style: NSUnderlineStyle = .single, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> NSAttributedString {
-        apply { .underline(semanticColor, style: style, usingTheme: theme) }
+    func underline(semanticColor: SemanticColor, andStyle style: NSUnderlineStyle = .single, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> NSAttributedString {
+        apply { .underline(semanticColor: semanticColor, andStyle: style, usingTheme: theme) }
     }
     
     func font(_ font: UIFont, withKern kern: CGFloat = 0) -> NSAttributedString {
@@ -57,11 +57,15 @@ public extension NSAttributedString {
         apply { .baselineOffset(offset) }
     }
     
-    func strikethroughStyle(_ style: NSUnderlineStyle = .single) -> NSAttributedString {
-        apply { .strikethroughStyle(style) }
+    func strikethrough(color: UIColor, andStyle style: NSUnderlineStyle = .single) -> NSAttributedString {
+        apply { .strikethrough(color: color, andStyle: style) }
     }
     
-    func paragraphStyle(_ style: NSMutableParagraphStyle) -> NSAttributedString {
+    func strikethrough(semanticColor: SemanticColor, andStyle style: NSUnderlineStyle = .single, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> NSAttributedString {
+        apply { .strikethrough(semanticColor: semanticColor, andStyle: style, usingTheme: theme) }
+    }
+    
+    func paragraphStyle(_ style: NSParagraphStyle) -> NSAttributedString {
         apply { .paragraphStyle(style) }
     }
 }

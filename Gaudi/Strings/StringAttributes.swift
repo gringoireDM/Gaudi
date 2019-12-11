@@ -37,25 +37,19 @@ public extension StringAttributes {
     static func background(_ semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> StringAttributes {
         background(theme.color(forSemanticColor: semanticColor))
     }
-    
-    static func underline(color: UIColor) -> StringAttributes {
-        StringAttributes(attr: [.underlineColor: color])
+        
+    static func underline(color: UIColor, andStyle style: NSUnderlineStyle = .single) -> StringAttributes {
+        StringAttributes(attr: [
+            .underlineStyle: style.rawValue,
+            .underlineColor: color
+        ])
     }
     
-    static func underline(semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> StringAttributes {
-        underline(theme.color(forSemanticColor: semanticColor))
-    }
-    
-    static func underline(style: NSUnderlineStyle) -> StringAttributes {
-        StringAttributes(attr: [.underlineStyle: style.rawValue])
-    }
-    
-    static func underline(_ color: UIColor, style: NSUnderlineStyle = .single) -> StringAttributes {
-        underline(color: color) + underline(style: style)
-    }
-    
-    static func underline(_ semanticColor: SemanticColor, style: NSUnderlineStyle = .single, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> StringAttributes {
-        underline(theme.color(forSemanticColor: semanticColor)) + underline(style: style)
+    static func underline(semanticColor: SemanticColor, andStyle style: NSUnderlineStyle = .single, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> StringAttributes {
+        StringAttributes(attr: [
+            .underlineStyle: style.rawValue,
+            .underlineColor: theme.color(forSemanticColor: semanticColor)
+        ])
     }
     
     static func font(_ font: UIFont, withKern kern: CGFloat = 0) -> StringAttributes {
@@ -74,11 +68,15 @@ public extension StringAttributes {
         StringAttributes(attr: [.baselineOffset: offset])
     }
     
-    static func strikethroughStyle(_ style: NSUnderlineStyle = .single) -> StringAttributes {
-        StringAttributes(attr: [NSAttributedString.Key.strikethroughStyle: style.rawValue])
+    static func strikethrough(color: UIColor, andStyle style: NSUnderlineStyle = .single) -> StringAttributes {
+        StringAttributes(attr: [.strikethroughStyle: style.rawValue, .strikethroughColor: color])
     }
     
-    static func paragraphStyle(_ style: NSMutableParagraphStyle) -> StringAttributes {
-        StringAttributes(attr: [NSAttributedString.Key.paragraphStyle: style])
+    static func strikethrough(semanticColor: SemanticColor, andStyle style: NSUnderlineStyle, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> StringAttributes {
+        StringAttributes(attr: [.strikethroughStyle: style.rawValue, .strikethroughColor: theme.color(forSemanticColor: semanticColor)])
+    }
+    
+    static func paragraphStyle(_ style: NSParagraphStyle) -> StringAttributes {
+        StringAttributes(attr: [.paragraphStyle: style])
     }
 }
