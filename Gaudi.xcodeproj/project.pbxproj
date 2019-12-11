@@ -31,6 +31,7 @@
 		506920B02397A53B0083ACDD /* MockTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920AE2397A53A0083ACDD /* MockTheme.swift */; };
 		506920B12397A53B0083ACDD /* ThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920AF2397A53A0083ACDD /* ThemeTests.swift */; };
 		5074A01723A19C6400A77A30 /* NSAttributedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01623A19C6400A77A30 /* NSAttributedStringTests.swift */; };
+		5074A01923A19D9800A77A30 /* NSAttributedStringDSLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		506920AE2397A53A0083ACDD /* MockTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTheme.swift; sourceTree = "<group>"; };
 		506920AF2397A53A0083ACDD /* ThemeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTests.swift; sourceTree = "<group>"; };
 		5074A01623A19C6400A77A30 /* NSAttributedStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringTests.swift; sourceTree = "<group>"; };
+		5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringDSLTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				501029DC23A0FC1C00BCB9A7 /* StringTests.swift */,
 				5074A01623A19C6400A77A30 /* NSAttributedStringTests.swift */,
+				5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */,
 			);
 			path = NSAttributedStringTests;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				506920B02397A53B0083ACDD /* MockTheme.swift in Sources */,
+				5074A01923A19D9800A77A30 /* NSAttributedStringDSLTests.swift in Sources */,
 				5074A01723A19C6400A77A30 /* NSAttributedStringTests.swift in Sources */,
 				506920B12397A53B0083ACDD /* ThemeTests.swift in Sources */,
 				501029D723A0516D00BCB9A7 /* ReversibleTests.swift in Sources */,
