@@ -117,10 +117,6 @@ public struct AppearanceRuleSet: AppearanceRule {
     }
 }
 
-public func + (lhs: AppearanceRuleSet, rhs: AppearanceRuleSet) -> AppearanceRuleSet {
-    AppearanceRuleSet(rules: lhs.rules + rhs.rules)
-}
-
 @_functionBuilder
 public struct AppearanceBuilder {
     public static func buildBlock(_ rule: AppearanceRule) -> AppearanceRule {
