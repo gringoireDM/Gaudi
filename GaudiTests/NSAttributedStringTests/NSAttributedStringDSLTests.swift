@@ -21,6 +21,16 @@ class NSAttributedStringDSLTests: XCTestCase {
         XCTAssertEqual(attributedString, expected)
     }
     
+    func test__it_can_build_attributed_strings__with_single_string__multiple_attributes() {
+        let expected = NSAttributedString(string: string, attributes: [
+            .foregroundColor: UIColor.red
+        ])
+        let attributedString = NSAttributedString {
+            string.attributed
+        }.foreground(color: .red)
+        XCTAssertEqual(attributedString, expected)
+    }
+    
     func test__it_can_build_attributed_strings__with_multiple_strings() {
         let first = NSAttributedString(string: string, attributes: [
             .foregroundColor: UIColor.white
@@ -37,6 +47,26 @@ class NSAttributedStringDSLTests: XCTestCase {
         }
         XCTAssertEqual(attributedString, expected)
     }
+    
+    func test__it_can_build_attributed_strings__with_multiple_strings__multiple_attributes() {
+        let first = NSAttributedString(string: string, attributes: [
+            .foregroundColor: UIColor.white
+        ])
+        let second = NSAttributedString(string: secondString, attributes: [
+            .foregroundColor: UIColor.red
+        ])
+        let expected = NSMutableAttributedString(attributedString: first)
+        expected.append(second)
+        expected.addAttributes([.backgroundColor: UIColor.green], range: NSRange(location: 0, length: (string+secondString).count))
+        
+        let attributedString = NSAttributedString {
+            string.foreground(color: .white)
+            secondString.foreground(color: .red)
+        }.background(color: .green)
+        
+        XCTAssertEqual(attributedString, expected)
+    }
+
     
     func test__it_can_build_attributed_strings__with_single_if() {
         let expected = NSAttributedString(string: string)

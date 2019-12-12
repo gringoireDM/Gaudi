@@ -8,7 +8,7 @@
 
 public extension NSAttributedString {
     func apply(inRange range: NSRange, @AttributesBuilder attributes: () -> StringAttributes) -> NSAttributedString {
-        let mutable = NSMutableAttributedString(string: string, attributes: self.attributes(at: 0, effectiveRange: nil))
+        let mutable = NSMutableAttributedString(attributedString: self)
         mutable.addAttributes(attributes().attributes, range: range)
         return mutable
     }
