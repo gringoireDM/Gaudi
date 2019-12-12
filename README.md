@@ -20,6 +20,10 @@ This framework uses semantic colors names to better adapt to [dark mode](https:/
 * [Supporting Dark Mode with Gaudí](#supporting-dark-mode-with-gaud%C3%AD)
     * [ThemedWindow](#themedwindow)
     * [Dynamic colors](#dynamic-colors)
+* [NSAttributedString](#nsattributedstring)
+    * [With standard APIs](#with-standard-apis)
+    * [With Gaudí DSL](#with-gaud%C3%AD-dsl)
+    * [NSAttributedString attributes](#nsattributedstring-attributes)
 
 # What's wrong with explicit color names?
 
@@ -209,7 +213,7 @@ Let's assume we want to compose this attributedString:
 
 <img src="./HelloSwift.png" alt="Gaudí"/>
 
-## The normal Way:
+## With standard APIs
 
 ```
 let hello = NSAttributedString(string: "Hello, ", attributes: [.foregroundColor: UIColor.red])
@@ -248,7 +252,7 @@ let final = NSAttributedString {
 }
 ```
 
-# NSAttributedString attributes
+## NSAttributedString attributes
 
 Sometimes it is needed to just compose an attributes dictionary to be used later in your code. Gaudí helps with that too, with a `StringAttributes` DSL.
 
