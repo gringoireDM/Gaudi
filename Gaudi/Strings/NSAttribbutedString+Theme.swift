@@ -17,20 +17,20 @@ public extension NSAttributedString {
         apply(inRange: NSMakeRange(0, (string as NSString).length), attributes: attributes)
     }
     
-    func foregroundColor(_ color: UIColor) -> NSAttributedString {
-        apply { .foregroundColor(color) }
+    func foreground(color: UIColor) -> NSAttributedString {
+        apply { .foreground(color: color) }
     }
     
-    func foregroundColor(_ semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> NSAttributedString {
-        apply { .foregroundColor(semanticColor, usingTheme: theme) }
+    func foreground(semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> NSAttributedString {
+        apply { .foreground(semanticColor: semanticColor, usingTheme: theme) }
     }
     
-    func background(_ color: UIColor) -> NSAttributedString {
-        apply { .background(color) }
+    func background(color: UIColor) -> NSAttributedString {
+        apply { .background(color: color) }
     }
     
-    func background(_ semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> NSAttributedString {
-        apply { .background(semanticColor, usingTheme: theme) }
+    func background(semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> NSAttributedString {
+        apply { .background(semanticColor: semanticColor, usingTheme: theme) }
     }
     
     func underline(color: UIColor, andStyle style: NSUnderlineStyle = .single) -> NSAttributedString {

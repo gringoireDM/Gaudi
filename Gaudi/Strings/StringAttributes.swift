@@ -22,20 +22,20 @@ public struct StringAttributes {
 
 public extension StringAttributes {
     
-    static func foregroundColor(_ color: UIColor) -> StringAttributes {
+    static func foreground(color: UIColor) -> StringAttributes {
         StringAttributes(attr: [.foregroundColor: color])
     }
     
-    static func foregroundColor(_ semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> StringAttributes {
-        foregroundColor(theme.color(forSemanticColor: semanticColor))
+    static func foreground(semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> StringAttributes {
+        foreground(color: theme.color(forSemanticColor: semanticColor))
     }
     
-    static func background(_ color: UIColor) -> StringAttributes {
+    static func background(color: UIColor) -> StringAttributes {
         StringAttributes(attr: [.backgroundColor: color])
     }
     
-    static func background(_ semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> StringAttributes {
-        background(theme.color(forSemanticColor: semanticColor))
+    static func background(semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> StringAttributes {
+        background(color: theme.color(forSemanticColor: semanticColor))
     }
         
     static func underline(color: UIColor, andStyle style: NSUnderlineStyle = .single) -> StringAttributes {

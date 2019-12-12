@@ -16,7 +16,7 @@ class SringAttributesTests: XCTestCase {
         let expected = [NSAttributedString.Key.foregroundColor: UIColor.green] as NSDictionary
         
         let attributes = StringAttributes
-            .foregroundColor(.green)
+            .foreground(color: .green)
             .attributes as NSDictionary
         
         XCTAssertEqual(attributes, expected)
@@ -28,7 +28,7 @@ class SringAttributesTests: XCTestCase {
         ] as NSDictionary
         
         let attributes = StringAttributes
-            .foregroundColor(.label(.primary), usingTheme: theme)
+            .foreground(semanticColor: .label(.primary), usingTheme: theme)
             .attributes as NSDictionary
         
         XCTAssertEqual(attributes, expected)
@@ -38,7 +38,7 @@ class SringAttributesTests: XCTestCase {
         let expected = [NSAttributedString.Key.backgroundColor: UIColor.green] as NSDictionary
         
         let attributes = StringAttributes
-            .background(.green)
+            .background(color: .green)
             .attributes as NSDictionary
         
         XCTAssertEqual(attributes, expected)
@@ -48,7 +48,7 @@ class SringAttributesTests: XCTestCase {
         let expected = [NSAttributedString.Key.backgroundColor: theme.color(forSemanticColor: .fill(.primary))] as NSDictionary
         
         let attributes = StringAttributes
-            .background(.fill(.primary), usingTheme: theme)
+            .background(semanticColor: .fill(.primary), usingTheme: theme)
             .attributes as NSDictionary
         
         XCTAssertEqual(attributes, expected)
@@ -161,8 +161,8 @@ class SringAttributesTests: XCTestCase {
         ] as NSDictionary
         
         let attributes = (
-            StringAttributes.foregroundColor(.green) +
-                StringAttributes.background(.red)
+            StringAttributes.foreground(color: .green) +
+                StringAttributes.background(color: .red)
             ).attributes as NSDictionary
         
         XCTAssertEqual(attributes, expected)

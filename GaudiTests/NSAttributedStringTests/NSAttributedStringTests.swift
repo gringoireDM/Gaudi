@@ -16,7 +16,7 @@ class NSAttributedStringTests: XCTestCase {
         let expected = NSAttributedString(string: string, attributes: [.foregroundColor: UIColor.green])
         
         let attributedString = string.attributed
-            .foregroundColor(.green)
+            .foreground(color: .green)
         
         XCTAssertEqual(attributedString, expected)
     }
@@ -25,7 +25,7 @@ class NSAttributedStringTests: XCTestCase {
         let expected = NSAttributedString(string: string, attributes: [.foregroundColor: theme.color(forSemanticColor: .label(.primary))])
         
         let attributedString = string.attributed
-            .foregroundColor(.label(.primary), usingTheme: theme)
+            .foreground(semanticColor: .label(.primary), usingTheme: theme)
         
         XCTAssertEqual(attributedString, expected)
     }
@@ -34,7 +34,7 @@ class NSAttributedStringTests: XCTestCase {
         let expected = NSAttributedString(string: string, attributes: [.backgroundColor: UIColor.green])
         
         let attributedString = string.attributed
-            .background(.green)
+            .background(color: .green)
         
         XCTAssertEqual(attributedString, expected)
     }
@@ -43,7 +43,7 @@ class NSAttributedStringTests: XCTestCase {
         let expected = NSAttributedString(string: string, attributes: [.backgroundColor: theme.color(forSemanticColor: .fill(.primary))])
         
         let attributedString = string.attributed
-            .background(.fill(.primary), usingTheme: theme)
+            .background(semanticColor: .fill(.primary), usingTheme: theme)
         
         XCTAssertEqual(attributedString, expected)
     }

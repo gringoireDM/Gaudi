@@ -32,8 +32,8 @@ class NSAttributedStringDSLTests: XCTestCase {
         expected.append(second)
         
         let attributedString = NSAttributedString {
-            string.foregroundColor(.white)
-            secondString.foregroundColor(.red)
+            string.foreground(color: .white)
+            secondString.foreground(color: .red)
         }
         XCTAssertEqual(attributedString, expected)
     }
@@ -90,7 +90,7 @@ class NSAttributedStringDSLTests: XCTestCase {
             if check {
                 secondString.attributed
             } else {
-                secondString.foregroundColor(.red)
+                secondString.foreground(color: .red)
             }
         }
         XCTAssertEqual(attributedString, expected)
@@ -110,7 +110,7 @@ class NSAttributedStringDSLTests: XCTestCase {
             if check {
                 secondString.attributed
             } else {
-                secondString.foregroundColor(.red)
+                secondString.foreground(color: .red)
             }
         }
         XCTAssertEqual(attributedString, expected)
@@ -123,7 +123,7 @@ class NSAttributedStringDSLTests: XCTestCase {
         let range = NSRange(location: 0, length: (string + secondString).count)
         let attributedString = (string + secondString).attributed
             .addingAttributes(forRange: range) {
-                StringAttributes.foregroundColor(.red)
+                StringAttributes.foreground(color: .red)
         }
         XCTAssertEqual(attributedString, expected)
     }
@@ -135,7 +135,7 @@ class NSAttributedStringDSLTests: XCTestCase {
         let range = NSRange(location: 0, length: (string + secondString).count)
         let attributedString = NSMutableAttributedString(string: string + secondString)
         attributedString.addAttributes(forRange: range) {
-                StringAttributes.foregroundColor(.red)
+                StringAttributes.foreground(color: .red)
         }
         XCTAssertEqual(attributedString, expected)
     }

@@ -7,20 +7,20 @@
 //
 
 public extension StringProtocol {
-    func foregroundColor(_ color: UIColor) -> NSAttributedString {
-        NSAttributedString(string: String(self)) { .foregroundColor(color) }
+    func foreground(color: UIColor) -> NSAttributedString {
+        NSAttributedString(string: String(self)) { .foreground(color: color) }
     }
     
-    func foregroundColor(_ semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> NSAttributedString {
-        NSAttributedString(string: String(self)) { .foregroundColor(semanticColor, usingTheme: theme) }
+    func foreground(semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> NSAttributedString {
+        NSAttributedString(string: String(self)) { .foreground(semanticColor: semanticColor, usingTheme: theme) }
     }
     
-    func background(_ color: UIColor) -> NSAttributedString {
-        NSAttributedString(string: String(self)) { .background(color) }
+    func background(color: UIColor) -> NSAttributedString {
+        NSAttributedString(string: String(self)) { .background(color: color) }
     }
     
-    func background(_ semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> NSAttributedString {
-        NSAttributedString(string: String(self)) { .background(semanticColor, usingTheme: theme) }
+    func background(semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> NSAttributedString {
+        NSAttributedString(string: String(self)) { .background(semanticColor: semanticColor, usingTheme: theme) }
     }
     
     func underline(color: UIColor, andStyle style: NSUnderlineStyle = .single) -> NSAttributedString {
