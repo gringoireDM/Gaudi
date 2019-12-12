@@ -215,7 +215,7 @@ Let's assume we want to compose this attributedString:
 
 ## With standard APIs
 
-```
+```swift
 let hello = NSAttributedString(string: "Hello, ", attributes: [.foregroundColor: UIColor.red])
 let swift = NSAttributedString(string: "Swift", attributes: [
    .foregroundColor: UIColor.orange,
@@ -229,7 +229,7 @@ the attributes of an `NSAttributedString` are of type `[NSAttributedString.Key: 
 
 ## With Gaudí DSL
 
-```
+```swift
 let final = NSAttributedString {
     "Hello, ".foreground(color: .red)
     "Swift".foreground(color: .orange)
@@ -239,7 +239,7 @@ let final = NSAttributedString {
 
 That's it... Gaudí allows a very concise, type safe, non verbose way of composing `NSAttributedString`s starting from bare `String` types. The DSL also supports if and if-else statements.
 
-```
+```swift
 let final = NSAttributedString {
     "Hello, ".foreground(color: .red)
     if swiftGreeting {
@@ -258,7 +258,7 @@ Sometimes it is needed to just compose an attributes dictionary to be used later
 
 Similarly to the `NSAttributedString` example: 
 
-```
+```swift
 let attributes = StringAttributes {
     StringAttributes.font(.systemFont(ofSize: 25))
     StringAttributes.foreground(color: .red)
