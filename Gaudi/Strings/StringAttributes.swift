@@ -72,7 +72,7 @@ public extension StringAttributes {
         StringAttributes(attr: [.strikethroughStyle: style.rawValue, .strikethroughColor: color])
     }
     
-    static func strikethrough(semanticColor: SemanticColor, andStyle style: NSUnderlineStyle, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> StringAttributes {
+    static func strikethrough(semanticColor: SemanticColor, andStyle style: NSUnderlineStyle = .single, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) -> StringAttributes {
         StringAttributes(attr: [.strikethroughStyle: style.rawValue, .strikethroughColor: theme.color(forSemanticColor: semanticColor)])
     }
     

@@ -32,6 +32,7 @@
 		506920B12397A53B0083ACDD /* ThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920AF2397A53A0083ACDD /* ThemeTests.swift */; };
 		5074A01723A19C6400A77A30 /* NSAttributedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01623A19C6400A77A30 /* NSAttributedStringTests.swift */; };
 		5074A01923A19D9800A77A30 /* NSAttributedStringDSLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */; };
+		5074A01B23A23FE900A77A30 /* SringAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01A23A23FE900A77A30 /* SringAttributesTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		506920AF2397A53A0083ACDD /* ThemeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTests.swift; sourceTree = "<group>"; };
 		5074A01623A19C6400A77A30 /* NSAttributedStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringTests.swift; sourceTree = "<group>"; };
 		5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringDSLTests.swift; sourceTree = "<group>"; };
+		5074A01A23A23FE900A77A30 /* SringAttributesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SringAttributesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				501029DC23A0FC1C00BCB9A7 /* StringTests.swift */,
 				5074A01623A19C6400A77A30 /* NSAttributedStringTests.swift */,
 				5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */,
+				5074A01A23A23FE900A77A30 /* SringAttributesTests.swift */,
 			);
 			path = NSAttributedStringTests;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				506920B12397A53B0083ACDD /* ThemeTests.swift in Sources */,
 				501029D723A0516D00BCB9A7 /* ReversibleTests.swift in Sources */,
 				501029D5239F8E4E00BCB9A7 /* AppearanceRuleDSLTests.swift in Sources */,
+				5074A01B23A23FE900A77A30 /* SringAttributesTests.swift in Sources */,
 				501029DD23A0FC1C00BCB9A7 /* StringTests.swift in Sources */,
 				501029D923A05BCD00BCB9A7 /* AppearanceRuleTests.swift in Sources */,
 			);
