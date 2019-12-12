@@ -75,7 +75,6 @@
 		5074A01623A19C6400A77A30 /* NSAttributedStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringTests.swift; sourceTree = "<group>"; };
 		5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringDSLTests.swift; sourceTree = "<group>"; };
 		5074A01A23A23FE900A77A30 /* SringAttributesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SringAttributesTests.swift; sourceTree = "<group>"; };
-		5074A01C23A244F000A77A30 /* NSAttributedString.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NSAttributedString.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				5069202D239798980083ACDD /* Gaudi.h */,
-				5074A01C23A244F000A77A30 /* NSAttributedString.playground */,
 				5069208923979A140083ACDD /* ThemeContainer.swift */,
 				506920A123979A5A0083ACDD /* UIWindow+Theme.swift */,
 				5069208823979A130083ACDD /* AppearanceRule.swift */,

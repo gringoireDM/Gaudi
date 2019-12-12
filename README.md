@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./GaudiLogo.png" alt="MERLin"/>
+<img src="./GaudiLogo.png" alt="Gaudí"/>
 </p>
 
 **Gaudí** is a framework for theme management in UIKit. It allows to easily swap themes in runtime, revert theming applied through `UIAppearance` proxies.
@@ -200,4 +200,64 @@ If you decide to have one unique Theme for supporting both light and dark mode, 
 and
 
 `UIColor(lightColorHex: "#123456", darkColorHex: "#654321")`
+
+# NSAttributedString
+
+Gaudí offers a great variety of utilities to compose and build `NSAttributedString`s in a very declarative way thanks to a DSL that makes the code very readable and composable.
+
+Let's assume we want to compose this attributedString:
+
+<img src="./HelloSwift.png" alt="Gaudí"/>
+
+## The normal Way:
+
+```
+let hello = NSAttributedString(string: "Hello, ", attributes: [.foregroundColor: UIColor.red])
+let swift = NSAttributedString(string: "Swift", attributes: [
+   .foregroundColor: UIColor.orange,
+   .font: UIFont.systemFont(ofSize: 18)
+   ])
+let final = NSMutableAttributedString(attributedString: hello)
+final.append(swift)
+```
+
+the attributes of an `NSAttributedString` are of type `[NSAttributedString.Key: Any]`. That `Any` united to poor autocompletion also for keys makes the code very verbose. In addition, there is to mention that `NSAttributedString` is not easy composable with other `NSAttributedString`, so that the use of `NSMutableAttributedString` is a must.
+
+## With Gaudí DSL
+
+```
+let final = NSAttributedString {
+    "Hello, ".foreground(color: .red)
+    "Swift".foreground(color: .orange)
+        .font(.systemFont(ofSize: 18))
+}
+```
+
+That's it... Gaudí allows a very concise, type safe, non verbose way of composing `NSAttributedString`s starting from bare `String` types. The DSL also supports if and if-else statements.
+
+```
+let final = NSAttributedString {
+    "Hello, ".foreground(color: .red)
+    if swiftGreeting {
+       "Swift".foreground(color: .orange)
+           .font(.systemFont(ofSize: 18))
+    } else {
+       "World".foreground(color: .green)
+           .font(.systemFont(ofSize: 15))
+    }
+}
+```
+
+# NSAttributedString attributes
+
+Sometimes it is needed to just compose an attributes dictionary to be used later in your code. Gaudí helps with that too, with a `StringAttributes` DSL.
+
+Similarly to the `NSAttributedString` example: 
+
+```
+let attributes = StringAttributes {
+    StringAttributes.font(.systemFont(ofSize: 25))
+    StringAttributes.foreground(color: .red)
+}.attributes
+```
 
