@@ -33,6 +33,7 @@
 		5074A01723A19C6400A77A30 /* NSAttributedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01623A19C6400A77A30 /* NSAttributedStringTests.swift */; };
 		5074A01923A19D9800A77A30 /* NSAttributedStringDSLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */; };
 		5074A01B23A23FE900A77A30 /* SringAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01A23A23FE900A77A30 /* SringAttributesTests.swift */; };
+		5074A01E23A2CB3E00A77A30 /* StringAttributesDSLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01D23A2CB3E00A77A30 /* StringAttributesDSLTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		5074A01623A19C6400A77A30 /* NSAttributedStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringTests.swift; sourceTree = "<group>"; };
 		5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringDSLTests.swift; sourceTree = "<group>"; };
 		5074A01A23A23FE900A77A30 /* SringAttributesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SringAttributesTests.swift; sourceTree = "<group>"; };
+		5074A01D23A2CB3E00A77A30 /* StringAttributesDSLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAttributesDSLTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				5074A01623A19C6400A77A30 /* NSAttributedStringTests.swift */,
 				5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */,
 				5074A01A23A23FE900A77A30 /* SringAttributesTests.swift */,
+				5074A01D23A2CB3E00A77A30 /* StringAttributesDSLTests.swift */,
 			);
 			path = NSAttributedStringTests;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				506920B02397A53B0083ACDD /* MockTheme.swift in Sources */,
+				5074A01E23A2CB3E00A77A30 /* StringAttributesDSLTests.swift in Sources */,
 				5074A01923A19D9800A77A30 /* NSAttributedStringDSLTests.swift in Sources */,
 				5074A01723A19C6400A77A30 /* NSAttributedStringTests.swift in Sources */,
 				506920B12397A53B0083ACDD /* ThemeTests.swift in Sources */,

@@ -153,7 +153,7 @@ class NSAttributedStringDSLTests: XCTestCase {
         let range = NSRange(location: 0, length: (string + secondString).count)
         let attributedString = (string + secondString).attributed
             .addingAttributes(forRange: range) {
-                StringAttributes.foreground(color: .red)
+                foregroundAttribute(withColor: .red)
         }
         XCTAssertEqual(attributedString, expected)
     }
@@ -165,7 +165,7 @@ class NSAttributedStringDSLTests: XCTestCase {
         let range = NSRange(location: 0, length: (string + secondString).count)
         let attributedString = NSMutableAttributedString(string: string + secondString)
         attributedString.addAttributes(forRange: range) {
-                StringAttributes.foreground(color: .red)
+            foregroundAttribute(withColor: .red)
         }
         XCTAssertEqual(attributedString, expected)
     }
