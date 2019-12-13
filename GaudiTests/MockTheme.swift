@@ -108,3 +108,27 @@ final class MockTheme: ThemeProtocol {
         return MockTheme()
     }
 }
+
+final class MockDarkTheme: ThemeProtocol {
+    var appearanceRules: AppearanceRuleSet = .empty
+    
+    func color(forSemanticColor semanticColor: SemanticColor) -> UIColor {
+        return semanticColor.color.negative()
+    }
+    
+    func font(forStyle style: FontStyle) -> UIFont {
+        return style.font
+    }
+    
+    func fontSize(forStyle style: FontStyle) -> CGFloat {
+        return style.fontSize
+    }
+    
+    func kern(forStyle style: FontStyle) -> CGFloat {
+        0
+    }
+    
+    final func cleanThemeCopy() -> MockDarkTheme {
+        return MockDarkTheme()
+    }
+}

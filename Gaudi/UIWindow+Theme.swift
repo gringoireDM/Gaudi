@@ -43,8 +43,27 @@ public extension UIWindow {
 }
 
 open class ThemedWindow: UIWindow {
-    public var lightTheme: ThemeProtocol
-    public var darkTheme: ThemeProtocol
+    public var lightTheme: ThemeProtocol {
+        didSet {
+            if #available(iOS 13.0, *) {
+                switch UITraitCollection.current.userInterfaceStyle {
+                case .light, .unspecified: applyCurrentTheme()
+                case .dark: break
+                @unknown default: applyCurrentTheme()
+                }
+            } else {
+                applyCurrentTheme()
+            }
+        }
+    }
+    
+    public var darkTheme: ThemeProtocol {
+        didSet {
+            guard #available(iOS 13.0, *),
+                case .dark = UITraitCollection.current.userInterfaceStyle else { return }
+            applyCurrentTheme()
+        }
+    }
     
     public var currentTheme: ThemeProtocol {
         if #available(iOS 13.0, *) {
@@ -76,7 +95,7 @@ open class ThemedWindow: UIWindow {
     }
     
     open override func makeKeyAndVisible() {
-        ThemeContainer.currentTheme = currentTheme
+        applyCurrentTheme()
         super.makeKeyAndVisible()
     }
     
@@ -84,6 +103,10 @@ open class ThemedWindow: UIWindow {
         super.traitCollectionDidChange(previousTraitCollection)
         
         guard #available(iOS 13.0, *), previousTraitCollection != UITraitCollection.current else { return }
+        applyCurrentTheme()
+    }
+    
+    func applyCurrentTheme() {
         ThemeContainer.currentTheme = currentTheme
     }
 }

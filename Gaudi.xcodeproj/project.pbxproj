@@ -38,6 +38,9 @@
 		5074A02323A44D4D00A77A30 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A02223A44D4D00A77A30 /* UIColor+Utils.swift */; };
 		5074A02523A44DEA00A77A30 /* UIColorUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A02423A44DEA00A77A30 /* UIColorUtilsTests.swift */; };
 		5074A02723A44F0000A77A30 /* UIColorThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A02623A44F0000A77A30 /* UIColorThemeTests.swift */; };
+		5074A02923A450D400A77A30 /* UIfontThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A02823A450D400A77A30 /* UIfontThemeTests.swift */; };
+		5074A02B23A4515400A77A30 /* UILabelThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A02A23A4515400A77A30 /* UILabelThemeTests.swift */; };
+		5074A02D23A4567B00A77A30 /* ThemedWindowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A02C23A4567B00A77A30 /* ThemedWindowTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		5074A02223A44D4D00A77A30 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 		5074A02423A44DEA00A77A30 /* UIColorUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorUtilsTests.swift; sourceTree = "<group>"; };
 		5074A02623A44F0000A77A30 /* UIColorThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorThemeTests.swift; sourceTree = "<group>"; };
+		5074A02823A450D400A77A30 /* UIfontThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIfontThemeTests.swift; sourceTree = "<group>"; };
+		5074A02A23A4515400A77A30 /* UILabelThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelThemeTests.swift; sourceTree = "<group>"; };
+		5074A02C23A4567B00A77A30 /* ThemedWindowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedWindowTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +228,9 @@
 				5074A02023A2D3C900A77A30 /* UIColorHexTests.swift */,
 				5074A02423A44DEA00A77A30 /* UIColorUtilsTests.swift */,
 				5074A02623A44F0000A77A30 /* UIColorThemeTests.swift */,
+				5074A02823A450D400A77A30 /* UIfontThemeTests.swift */,
+				5074A02A23A4515400A77A30 /* UILabelThemeTests.swift */,
+				5074A02C23A4567B00A77A30 /* ThemedWindowTests.swift */,
 			);
 			path = UIKitTests;
 			sourceTree = "<group>";
@@ -363,6 +372,8 @@
 				5074A02123A2D3C900A77A30 /* UIColorHexTests.swift in Sources */,
 				5074A02723A44F0000A77A30 /* UIColorThemeTests.swift in Sources */,
 				5074A01E23A2CB3E00A77A30 /* StringAttributesDSLTests.swift in Sources */,
+				5074A02D23A4567B00A77A30 /* ThemedWindowTests.swift in Sources */,
+				5074A02B23A4515400A77A30 /* UILabelThemeTests.swift in Sources */,
 				5074A01923A19D9800A77A30 /* NSAttributedStringDSLTests.swift in Sources */,
 				5074A01723A19C6400A77A30 /* NSAttributedStringTests.swift in Sources */,
 				506920B12397A53B0083ACDD /* ThemeTests.swift in Sources */,
@@ -371,6 +382,7 @@
 				501029D5239F8E4E00BCB9A7 /* AppearanceRuleDSLTests.swift in Sources */,
 				5074A01B23A23FE900A77A30 /* SringAttributesTests.swift in Sources */,
 				501029DD23A0FC1C00BCB9A7 /* StringTests.swift in Sources */,
+				5074A02923A450D400A77A30 /* UIfontThemeTests.swift in Sources */,
 				501029D923A05BCD00BCB9A7 /* AppearanceRuleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
