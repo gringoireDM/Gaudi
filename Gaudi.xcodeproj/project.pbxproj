@@ -34,6 +34,7 @@
 		5074A01923A19D9800A77A30 /* NSAttributedStringDSLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */; };
 		5074A01B23A23FE900A77A30 /* SringAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01A23A23FE900A77A30 /* SringAttributesTests.swift */; };
 		5074A01E23A2CB3E00A77A30 /* StringAttributesDSLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01D23A2CB3E00A77A30 /* StringAttributesDSLTests.swift */; };
+		5074A02123A2D3C900A77A30 /* UIColorHexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A02023A2D3C900A77A30 /* UIColorHexTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		5074A01823A19D9800A77A30 /* NSAttributedStringDSLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringDSLTests.swift; sourceTree = "<group>"; };
 		5074A01A23A23FE900A77A30 /* SringAttributesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SringAttributesTests.swift; sourceTree = "<group>"; };
 		5074A01D23A2CB3E00A77A30 /* StringAttributesDSLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAttributesDSLTests.swift; sourceTree = "<group>"; };
+		5074A02023A2D3C900A77A30 /* UIColorHexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHexTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				506920AE2397A53A0083ACDD /* MockTheme.swift */,
 				506920AF2397A53A0083ACDD /* ThemeTests.swift */,
+				5074A01F23A2D3AE00A77A30 /* UIKitTests */,
 				501029DB23A0FC0600BCB9A7 /* NSAttributedStringTests */,
 				501029DA23A0FBEF00BCB9A7 /* RulesTests */,
 				5069203A239798980083ACDD /* Info.plist */,
@@ -204,6 +207,14 @@
 				506920A923979F8C0083ACDD /* NSAttributedStringBuilder.swift */,
 			);
 			path = Builders;
+			sourceTree = "<group>";
+		};
+		5074A01F23A2D3AE00A77A30 /* UIKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				5074A02023A2D3C900A77A30 /* UIColorHexTests.swift */,
+			);
+			path = UIKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				506920B02397A53B0083ACDD /* MockTheme.swift in Sources */,
+				5074A02123A2D3C900A77A30 /* UIColorHexTests.swift in Sources */,
 				5074A01E23A2CB3E00A77A30 /* StringAttributesDSLTests.swift in Sources */,
 				5074A01923A19D9800A77A30 /* NSAttributedStringDSLTests.swift in Sources */,
 				5074A01723A19C6400A77A30 /* NSAttributedStringTests.swift in Sources */,

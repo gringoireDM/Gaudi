@@ -78,7 +78,7 @@ public extension UIColor {
     
     func toImage() -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
-        UIGraphicsBeginImageContext(rect.size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 1)
         let context = UIGraphicsGetCurrentContext()
         context!.setFillColor(cgColor)
         context!.fill(rect)
