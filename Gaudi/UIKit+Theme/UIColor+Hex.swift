@@ -6,6 +6,8 @@
 //  Copyright © 2019 Giuseppe Lanza. All rights reserved.
 //
 
+import UIKit
+
 public extension UIColor {
     static func color(fromHex hex: String) -> UIColor {
         var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
@@ -58,43 +60,6 @@ public extension UIColor {
             let b = Float(components[2])
             return String(format: "#%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255))
         }
-    }
-    
-    func negative() -> UIColor {
-        var (r, g, b): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
-        _ = getRed(&r, green: &g, blue: &b, alpha: nil)
-        return UIColor(red: 1 - r, green: 1 - g, blue: 1 - b, alpha: 1)
-    }
-    
-    func desaturated() -> UIColor {
-        var hue: CGFloat = 0
-        var brightness: CGFloat = 0
-        var alpha: CGFloat = 0
-        
-        getHue(&hue, saturation: nil, brightness: &brightness, alpha: &alpha)
-        
-        return UIColor(hue: hue, saturation: 0, brightness: brightness, alpha: alpha)
-    }
-    
-    func toImage() -> UIImage {
-        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 1)
-        let context = UIGraphicsGetCurrentContext()
-        context!.setFillColor(cgColor)
-        context!.fill(rect)
-        let img = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return img!
-    }
-    
-    func isSameColorAs(_ color: UIColor) -> Bool {
-        var (selfR, selfG, selfB): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
-        var (r, g, b): (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
-        
-        _ = getRed(&selfR, green: &selfG, blue: &selfB, alpha: nil)
-        _ = color.getRed(&r, green: &g, blue: &b, alpha: nil)
-        
-        return selfR == r && selfG == g && selfB == b
     }
     
     @available(iOS 13.0, *)

@@ -21,7 +21,7 @@
 		5069209A23979A4A0083ACDD /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069209323979A4A0083ACDD /* UIColor+Theme.swift */; };
 		5069209C23979A4A0083ACDD /* String+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069209523979A4A0083ACDD /* String+Theme.swift */; };
 		5069209D23979A4A0083ACDD /* UIFont+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069209623979A4A0083ACDD /* UIFont+Theme.swift */; };
-		5069209E23979A4A0083ACDD /* UIColors+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069209723979A4A0083ACDD /* UIColors+Hex.swift */; };
+		5069209E23979A4A0083ACDD /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069209723979A4A0083ACDD /* UIColor+Hex.swift */; };
 		506920A023979A4A0083ACDD /* UILabel+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069209923979A4A0083ACDD /* UILabel+Theme.swift */; };
 		506920A223979A5A0083ACDD /* UIWindow+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920A123979A5A0083ACDD /* UIWindow+Theme.swift */; };
 		506920A623979DFB0083ACDD /* StringAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506920A523979DFB0083ACDD /* StringAttributes.swift */; };
@@ -35,6 +35,9 @@
 		5074A01B23A23FE900A77A30 /* SringAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01A23A23FE900A77A30 /* SringAttributesTests.swift */; };
 		5074A01E23A2CB3E00A77A30 /* StringAttributesDSLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A01D23A2CB3E00A77A30 /* StringAttributesDSLTests.swift */; };
 		5074A02123A2D3C900A77A30 /* UIColorHexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A02023A2D3C900A77A30 /* UIColorHexTests.swift */; };
+		5074A02323A44D4D00A77A30 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A02223A44D4D00A77A30 /* UIColor+Utils.swift */; };
+		5074A02523A44DEA00A77A30 /* UIColorUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A02423A44DEA00A77A30 /* UIColorUtilsTests.swift */; };
+		5074A02723A44F0000A77A30 /* UIColorThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074A02623A44F0000A77A30 /* UIColorThemeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +68,7 @@
 		5069209323979A4A0083ACDD /* UIColor+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		5069209523979A4A0083ACDD /* String+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Theme.swift"; sourceTree = "<group>"; };
 		5069209623979A4A0083ACDD /* UIFont+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Theme.swift"; sourceTree = "<group>"; };
-		5069209723979A4A0083ACDD /* UIColors+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors+Hex.swift"; sourceTree = "<group>"; };
+		5069209723979A4A0083ACDD /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		5069209923979A4A0083ACDD /* UILabel+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Theme.swift"; sourceTree = "<group>"; };
 		506920A123979A5A0083ACDD /* UIWindow+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Theme.swift"; sourceTree = "<group>"; };
 		506920A523979DFB0083ACDD /* StringAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAttributes.swift; sourceTree = "<group>"; };
@@ -79,6 +82,9 @@
 		5074A01A23A23FE900A77A30 /* SringAttributesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SringAttributesTests.swift; sourceTree = "<group>"; };
 		5074A01D23A2CB3E00A77A30 /* StringAttributesDSLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAttributesDSLTests.swift; sourceTree = "<group>"; };
 		5074A02023A2D3C900A77A30 /* UIColorHexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHexTests.swift; sourceTree = "<group>"; };
+		5074A02223A44D4D00A77A30 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		5074A02423A44DEA00A77A30 /* UIColorUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorUtilsTests.swift; sourceTree = "<group>"; };
+		5074A02623A44F0000A77A30 /* UIColorThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorThemeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				5069209323979A4A0083ACDD /* UIColor+Theme.swift */,
-				5069209723979A4A0083ACDD /* UIColors+Hex.swift */,
+				5069209723979A4A0083ACDD /* UIColor+Hex.swift */,
+				5074A02223A44D4D00A77A30 /* UIColor+Utils.swift */,
 				5069209623979A4A0083ACDD /* UIFont+Theme.swift */,
 				5069209923979A4A0083ACDD /* UILabel+Theme.swift */,
 			);
@@ -213,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				5074A02023A2D3C900A77A30 /* UIColorHexTests.swift */,
+				5074A02423A44DEA00A77A30 /* UIColorUtilsTests.swift */,
+				5074A02623A44F0000A77A30 /* UIColorThemeTests.swift */,
 			);
 			path = UIKitTests;
 			sourceTree = "<group>";
@@ -332,8 +341,9 @@
 				5069208F23979A140083ACDD /* FontStyle.swift in Sources */,
 				506920A023979A4A0083ACDD /* UILabel+Theme.swift in Sources */,
 				5069209C23979A4A0083ACDD /* String+Theme.swift in Sources */,
-				5069209E23979A4A0083ACDD /* UIColors+Hex.swift in Sources */,
+				5069209E23979A4A0083ACDD /* UIColor+Hex.swift in Sources */,
 				506920AC2397A07F0083ACDD /* NSAttribbutedString+Theme.swift in Sources */,
+				5074A02323A44D4D00A77A30 /* UIColor+Utils.swift in Sources */,
 				506920A823979EF20083ACDD /* AttributesBuilder.swift in Sources */,
 				5069208E23979A140083ACDD /* ThemeContainer.swift in Sources */,
 				5069209A23979A4A0083ACDD /* UIColor+Theme.swift in Sources */,
@@ -351,11 +361,13 @@
 			files = (
 				506920B02397A53B0083ACDD /* MockTheme.swift in Sources */,
 				5074A02123A2D3C900A77A30 /* UIColorHexTests.swift in Sources */,
+				5074A02723A44F0000A77A30 /* UIColorThemeTests.swift in Sources */,
 				5074A01E23A2CB3E00A77A30 /* StringAttributesDSLTests.swift in Sources */,
 				5074A01923A19D9800A77A30 /* NSAttributedStringDSLTests.swift in Sources */,
 				5074A01723A19C6400A77A30 /* NSAttributedStringTests.swift in Sources */,
 				506920B12397A53B0083ACDD /* ThemeTests.swift in Sources */,
 				501029D723A0516D00BCB9A7 /* ReversibleTests.swift in Sources */,
+				5074A02523A44DEA00A77A30 /* UIColorUtilsTests.swift in Sources */,
 				501029D5239F8E4E00BCB9A7 /* AppearanceRuleDSLTests.swift in Sources */,
 				5074A01B23A23FE900A77A30 /* SringAttributesTests.swift in Sources */,
 				501029DD23A0FC1C00BCB9A7 /* StringTests.swift in Sources */,
@@ -553,6 +565,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GaudiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -571,6 +584,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GaudiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
