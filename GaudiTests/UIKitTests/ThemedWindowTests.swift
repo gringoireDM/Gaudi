@@ -14,14 +14,27 @@ class ThemedWindowTests: XCTestCase {
     let darkTheme = MockDarkTheme()
     
     var window: ThemedWindow!
+    var rootViewController: MockViewController!
+    var windowsContainer: MockWindowsContainer!
+    
     override func setUp() {
         super.setUp()
+        windowsContainer = MockWindowsContainer()
+        rootViewController = MockViewController()
         window = ThemedWindow(lightTheme: lightTheme, darkTheme: darkTheme)
+        window.rootViewController = rootViewController
+        
+        windowsContainer.windows.append(window)
+        
+        ThemeContainer.windowsContainer = windowsContainer
     }
     
     override func tearDown() {
         super.tearDown()
         window = nil
+        rootViewController = nil
+        windowsContainer = nil
+        ThemeContainer.windowsContainer = UIApplication.shared
     }
     
     @available(iOS 13.0, *)

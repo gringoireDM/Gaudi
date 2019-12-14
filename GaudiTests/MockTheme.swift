@@ -132,3 +132,7 @@ final class MockDarkTheme: ThemeProtocol {
         return MockDarkTheme()
     }
 }
+
+final class MockWindowsContainer: WindowsContainer {
+    var windows: [UIWindow] = []
+}
