@@ -81,6 +81,8 @@ open class ThemedWindow: UIWindow {
         self.lightTheme = lightTheme
         self.darkTheme = darkTheme
         super.init(frame: .zero)
+        
+        applyCurrentTheme()
     }
     
     @available(iOS 13.0, *)
@@ -88,15 +90,12 @@ open class ThemedWindow: UIWindow {
         self.lightTheme = lightTheme
         self.darkTheme = darkTheme
         super.init(windowScene: windowScene)
+        
+        applyCurrentTheme()
     }
     
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    open override func makeKeyAndVisible() {
-        applyCurrentTheme()
-        super.makeKeyAndVisible()
     }
     
     open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
