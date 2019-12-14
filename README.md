@@ -2,6 +2,19 @@
 <img src="./GaudiLogo.png" alt="Gaudí"/>
 </p>
 
+<p align="center">
+    <img src="https://img.shields.io/badge/Swift-5.1-orange.svg" />
+    <a href="https://travis-ci.org/gringoireDM/Gaudi">
+        <img src="https://travis-ci.org/gringoireDM/Gaudi.svg?branch=master" alt="Build Status" />
+    </a>
+    <a href="https://codecov.io/gh/gringoireDM/Gaudi">
+        <img src="https://codecov.io/gh/gringoireDM/Gaudi/branch/master/graph/badge.svg" />
+    </a>
+    <a href="https://swift.org/package-manager">
+        <img src="https://img.shields.io/badge/swiftPM-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
+    </a>
+</p>
+
 **Gaudí** is a framework for theme management in UIKit. It allows to easily swap themes in runtime, revert theming applied through `UIAppearance` proxies.
 
 Gaudí also provides a DSL for `UIAppearance` rules and `NSAttributedString`.
