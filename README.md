@@ -13,6 +13,7 @@
     <a href="https://swift.org/package-manager">
         <img src="https://img.shields.io/badge/swiftPM-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
     </a>
+    <img src="https://cocoapod-badges.herokuapp.com/v/Gaudi/badge.png" alt="cocoapods" />
 </p>
 
 **Gaudí** is a framework for theme management in UIKit. It allows to easily swap themes in runtime, revert theming applied through `UIAppearance` proxies.
