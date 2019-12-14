@@ -8,6 +8,7 @@
 
 @testable import Gaudi
 import XCTest
+import UIKit
 
 class StringAttributesDSLTests: XCTestCase {
     func test__it_can_build__one_attribute() {

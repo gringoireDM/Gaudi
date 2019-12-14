@@ -8,6 +8,7 @@
 
 @testable import Gaudi
 import XCTest
+import UIKit
 
 extension UIImage {
     func pixelColor(pos: CGPoint = .zero) -> UIColor? {

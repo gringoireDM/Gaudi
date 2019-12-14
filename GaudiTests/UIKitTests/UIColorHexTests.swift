@@ -8,7 +8,7 @@
 
 @testable import Gaudi
 import XCTest
-
+import UIKit
 
 class UIColorTests: XCTestCase {
     

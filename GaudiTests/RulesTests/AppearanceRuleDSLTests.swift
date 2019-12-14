@@ -8,6 +8,7 @@
 
 @testable import Gaudi
 import XCTest
+import UIKit
 
 class AppearanceRuleDSLTests: XCTestCase {
     func test__it_can_build_an_empty_ruleset() {

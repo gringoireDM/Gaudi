@@ -8,6 +8,7 @@
 
 @testable import Gaudi
 import XCTest
+import UIKit
 
 class MockViewController: UIViewController, Themed {
     var applyTimes: Int = 0

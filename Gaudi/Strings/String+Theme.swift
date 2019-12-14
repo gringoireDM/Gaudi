@@ -6,6 +6,8 @@
 //  Copyright © 2019 MERLin Tech. All rights reserved.
 //
 
+import UIKit
+
 public extension StringProtocol {
     func foreground(color: UIColor) -> NSAttributedString {
         NSAttributedString(string: String(self)) { Gaudi.foregroundAttribute(withColor: color) }

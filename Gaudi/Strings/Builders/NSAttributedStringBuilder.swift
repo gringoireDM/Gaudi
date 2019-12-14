@@ -6,6 +6,8 @@
 //  Copyright © 2019 Giuseppe Lanza. All rights reserved.
 //
 
+import UIKit
+
 @_functionBuilder
 public struct NSAttributedStringBuilder {
     public static func buildBlock(_ segments: NSAttributedString...) -> NSAttributedString {

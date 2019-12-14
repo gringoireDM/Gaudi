@@ -8,6 +8,7 @@
 
 @testable import Gaudi
 import XCTest
+import UIKit
 
 class ReversibleTests: XCTestCase {
     func test_it_can_store_original_value() {

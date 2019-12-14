@@ -6,6 +6,8 @@
 //  Copyright © 2019 Giuseppe Lanza. All rights reserved.
 //
 
+import UIKit
+
 public extension UIWindow {
     func applyTheme(_ theme: ThemeProtocol) {
         theme.appearanceRules.apply()

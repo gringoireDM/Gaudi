@@ -6,7 +6,7 @@
 //  Copyright © 2019 Moda Operandi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Gaudi
 
 extension SemanticColor {

@@ -6,6 +6,8 @@
 //  Copyright © 2019 Giuseppe Lanza. All rights reserved.
 //
 
+import UIKit
+
 @_functionBuilder
 public struct AttributesBuilder {
     public static func buildBlock(_ attributes: StringAttributes...) -> StringAttributes {

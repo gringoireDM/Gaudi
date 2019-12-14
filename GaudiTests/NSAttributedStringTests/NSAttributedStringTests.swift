@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import UIKit
 
 class NSAttributedStringTests: XCTestCase {
     let theme = MockTheme()

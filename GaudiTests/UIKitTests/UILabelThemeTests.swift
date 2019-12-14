@@ -8,6 +8,7 @@
 
 @testable import Gaudi
 import XCTest
+import UIKit
 
 class UILabelThemeTests: XCTestCase {
     let theme = MockTheme()

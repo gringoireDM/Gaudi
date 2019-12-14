@@ -6,6 +6,8 @@
 //  Copyright © 2019 Giuseppe Lanza. All rights reserved.
 //
 
+import UIKit
+
 public extension NSAttributedString {
     func apply(inRange range: NSRange, @AttributesBuilder attributes: () -> StringAttributes) -> NSAttributedString {
         let mutable = NSMutableAttributedString(attributedString: self)

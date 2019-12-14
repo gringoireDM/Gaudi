@@ -8,6 +8,7 @@
 
 @testable import Gaudi
 import XCTest
+import UIKit
 
 class NSAttributedStringDSLTests: XCTestCase {
     let string = "Frank"

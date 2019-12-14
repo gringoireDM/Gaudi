@@ -6,6 +6,8 @@
 //  Copyright © 2019 Giuseppe Lanza. All rights reserved.
 //
 
+import UIKit
+
 public extension UILabel {
     func applyLabelStyle(_ style: FontStyle, semanticColor: SemanticColor, usingTheme theme: ThemeProtocol = ThemeContainer.currentTheme) {
         textColor = theme.color(forSemanticColor: semanticColor)

@@ -6,6 +6,8 @@
 //  Copyright © 2019 Giuseppe Lanza. All rights reserved.
 //
 
+import UIKit
+
 public enum FontAttribute: CaseIterable {
     case regular, bold, sBold, italic
 }

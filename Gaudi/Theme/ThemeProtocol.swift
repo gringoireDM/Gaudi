@@ -6,6 +6,8 @@
 //  Copyright © 2019 Giuseppe Lanza. All rights reserved.
 //
 
+import UIKit
+
 /// This protocol should be adopted by those ViewControllers
 ///that are meant to be themed
 public protocol Themed: UITraitEnvironment {
