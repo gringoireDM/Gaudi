@@ -260,8 +260,8 @@ Similarly to the `NSAttributedString` example:
 
 ```swift
 let attributes = StringAttributes {
-    StringAttributes.font(.systemFont(ofSize: 25))
-    StringAttributes.foreground(color: .red)
+    fontAttribute(withFont: .systemFont(ofSize: 25))
+    foregroundAttribute(withColor: .red)
 }.attributes
 ```
 
